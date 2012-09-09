@@ -1,0 +1,51 @@
+vCLI= vSphere CLI
+
+****************************************
+vSphere CLI Command Set
+****************************************
++ ESXCLI commands
++ vicfg- commands : eventually replaced by ESXCLI commands
++ Other commands: vmware-cmd, vifs, vmkfstools
+
+****************************************
+vSphere API
+****************************************
++ Is a language-neutral web service.
++ 3 types of object:  
+-- Managed Objects: represent vSphere services and components. Services include PropertyCollector, SearchIndex,PerformanceManager, ViewManager. Components include: VM, datastore, folder.
+-- Managed object reference: client application references to server-side managed objects.
+-- Data objects: contain info about managed objects. Client applications end data objects to and receive data objects from a vSphere server.
+
++ Inventory Object: 
+-- Systems in the datacenter: Host, VirtualMachine, VirtualApp
+-- Support components: ComputerResource, Datastore, Network and virtual devices
+-- Organizational components: folder and datacenter
+
+
+****************************************
+Terminologies
+****************************************
+Source: vCenter Server and Host Management/vSphere Concepts and Features
++ Datacenter: an logical aggregation of different types of physical resources (doesn't have to be constrained by the physical location)
+Note: vMotion and Storage vMotion doesn't work across datacenter. vNetwork Distributed Switch is limited to within a datacenter.
+
+Typically consists of: ESX servers, storage network and arrays (SAN,iSCSI SAN, NAS), IP Networks, vCenter Server
+
++ Cluster: a collection of ESX or ESXi hosts and associated virtual machines. Physical resources from all the hosts within a cluster are jointly owned by 
+the cluster and centrally managed by the vCenter Server.
+vSphere administrator must create clusters to use cluster-level resource management features: 
+	+ High Availability (HA)
+	+ Fault Tolerance (FT)
+	+ Distributed Resource Scheduler (DRS)	
+	+ Distributed Power Management (DPM)
++ Resource Pool: collection of resources (usually within a cluster). Used to compartmentalize the CPU and memory resources of a host or cluster. VMs execute in, and draw their resources from resource pools.
+
++ Datastores: a virtual representation of the underlying physical storage resources in the datacenter.
++ Inventory: collection of virtual and physical objects on which admin can put permissions, monitor tasks and events and set alarms.
+
++ vMotion: a feature that enables moving running VMs from one ESXi host to another (hot migration)
++ Storage vMotion: a feature that enables moving disks and configuration files of a running VM from one datastore to another (hot)
+
+
++ Resources: CPU, memory, power, storage, and network resources
+
