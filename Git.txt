@@ -6,4 +6,17 @@ Setup New Repository
 3> git init 
 4> git pull https://<path to the new repo>
  
-+
+********************************************************************
+Automatic SSH setup
+********************************************************************
+1> Setup a private key, details: https://help.github.com/articles/generating-ssh-keys
+2> Register a remote rep (see below), if intend to use private ssh, use SSH url instead of HTTPS url.
+2.1> Modify config file under .git folder to use SSH url (instead of HTTPS url)
+
+********************************************************************
+Commands
+********************************************************************
++ "Register" a remote rep:
+	git remote add <rep_shortname> <rep URL(from GitHub)> 
+
+
