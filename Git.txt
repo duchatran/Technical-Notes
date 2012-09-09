@@ -1,0 +1,9 @@
+********************************************************************
+Setup New Repository
+********************************************************************
+1> First create an empty repository on GitHub through the web
+2> On your machine, go to the project folder (existing or create a new one)
+3> git init 
+4> git pull https://<path to the new repo>
+ 
++
